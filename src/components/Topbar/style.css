@@ -1,0 +1,16 @@
+.box {
+    text-align: center;
+    padding: 2vw;
+}
+
+.topbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    background-color: white;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
