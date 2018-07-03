@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Link, NavLink } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Homepage from '../Homepage';
+import Blog from '../Blog';
+import Portfolio from '../Portfolio';
 import './style.css';
 
 
@@ -25,15 +27,9 @@ export default class Topbar extends React.Component {
                         <NavLink to='/portfolio' exact>PORTFOLIO</NavLink>
                         <NavLink to='/blog' exact>BLOG</NavLink>
                     </div>
-                    <Route path='/portfolio' render={() => {
-                        console.log('we on the portfolio');
-                        return <h1 style={style}>PORTFOLIO</h1>
-                    }}/>
+                    <Route path='/portfolio' component={Portfolio}/>
                     <Route path='/' exact strict component={Homepage}/>
-                    <Route path='/blog' exact strict render={() => {
-                        console.log('we on the blog');
-                        return <h1 style={style}>BLOG</h1>
-                    }}/>
+                    <Route path='/blog' exact strict component={Blog}/>
                 </div>
             </BrowserRouter>
         );
