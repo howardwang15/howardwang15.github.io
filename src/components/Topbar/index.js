@@ -1,20 +1,27 @@
-import React from 'react'
-import './style.css'
+import React from 'react';
+import { BrowserRouter, Link, NavLink } from 'react-router-dom';
+import './style.css';
+import Route from 'react-router-dom/Route';
 
-const padding = {
-    padding: '5px'
+
+const style = {
+    position: 'relative'
 };
 
+const s = {
+    position: 'fixed'
+}
 
 export default class Topbar extends React.Component {
     render() {
         return (
-            <div className="topbar">
-                <div className="box">
-                    <a href="" style={padding}>ABOUT ME</a>
-                    <a href='portfolio' style={padding}>PORTFOLIO</a>
+            <BrowserRouter>
+                <div class='navbar'> 
+                    <NavLink to='/' exact>ABOUT ME</NavLink>
+                    <NavLink to='portfolio' exact>PORTFOLIO</NavLink>
+                    <NavLink to='blog' exact>BLOG</NavLink>
                 </div>
-            </div>
+            </BrowserRouter>
         );
     }
 }
