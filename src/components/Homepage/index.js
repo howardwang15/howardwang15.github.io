@@ -6,7 +6,6 @@ export default class Homepage extends React.Component {
     render() {
         return (
             <div>
-                <Topbar />
                 <div className='blurb'>
                     HELLO, I'M HOWARD WANG.
                 </div>
