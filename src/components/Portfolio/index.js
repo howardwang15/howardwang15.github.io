@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import Button from '../Button';
 
 export default class Portfolio extends React.Component {
     render() {
@@ -14,23 +15,9 @@ export default class Portfolio extends React.Component {
                     </ul>
                 </div>
                 <div className='skills'>
-                    What frameworks/libraries do I know?
+                    <Button title='What frameworks/libraries do I know' textColor='white' border={false}/>
                     <ul>
-                        <li>React.js</li>
-                        <li>Redux</li>
-                        <li>Node.js</li>
-                        <li>Bootstrap</li>
-                        <li>MongoDB</li>
-                        <li>Tensorflow</li>
-                        <li>PyTorch</li>
-                        <li>React.js</li>
-                        <li>Redux</li>
-                        <li>Node.js</li>
-                        <li>Bootstrap</li>
-                        <li>MongoDB</li>
-                        <li>Tensorflow</li>
-                        <li>PyTorch</li>
-                        <li>React.js</li>
+                        <li className='double'>React.js</li>
                         <li>Redux</li>
                         <li>Node.js</li>
                         <li>Bootstrap</li>
@@ -40,7 +27,7 @@ export default class Portfolio extends React.Component {
                     </ul>
                 </div>
                 <div className='skills'>
-                    What languages do I know?
+                    <Button title='What languages do I know?' textColor='white' border={false}/>
                     <ul>
                         <li>JavaScript (ES6)</li>
                         <li>HTML</li>
@@ -75,7 +62,7 @@ export default class Portfolio extends React.Component {
                     <ul>
                         <li>ACM
                             <ul>
-                                <li className='default-bullet'>hi</li>
+                                <li>Dev Team Officer</li>
                             </ul>
                         </li>
                     </ul>
