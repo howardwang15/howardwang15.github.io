@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 
+
+
 export default class Button extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +15,7 @@ export default class Button extends React.Component {
     render() {
         return (
             <div>
-                <button className='btn' style={this.style}>{this.props.title}</button>
+                <button className='btn' style={this.style} onClick={this.props.onClick}>{this.props.title}</button>
             </div>
         )
     }

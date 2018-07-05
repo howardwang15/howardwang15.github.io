@@ -1,5 +1,4 @@
 import React from 'react';
-import Topbar from '../Topbar'
 import './style.css'
 
 export default class Homepage extends React.Component {

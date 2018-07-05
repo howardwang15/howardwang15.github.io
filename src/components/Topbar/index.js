@@ -1,21 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, NavLink } from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Homepage from '../Homepage';
 import Blog from '../Blog';
 import Portfolio from '../Portfolio';
 import './style.css';
-
-
-const style = {
-    position: 'relative',
-    color: 'red',
-    top: '200px'
-};
-
-const s = {
-    position: 'fixed'
-}
 
 export default class Topbar extends React.Component {
     render() {
