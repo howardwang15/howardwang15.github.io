@@ -1,69 +1,58 @@
 import React from 'react';
 import './style.css';
-import Button from '../Button';
 import Collapsible from '../Collapsible';
 
-const skills = ['Front-end Development', 'Back-end Development', 'Machine Learning', 'Android development'];
-const frameworks = ['React.js', 'Redux', 'Bootstrap', 'MongoDB', 'Tensorflow', 'PyTorch'];
-const languages = ['JavaScript (ES6)', 'CSS 3', 'HTML 5', 'C++', 'C', 'Java', 'Python'];
-const relevantClasses = 
+var formatAsList = (array) => {
+    array = array.map(element => <li className='bullet'>{element}</li>);
+    return <ul>{array}</ul>
+}
+
+var skills = ['Front-end Development', 'Back-end Development', 'Machine Learning', 'Android development'];
+var frameworks = ['React.js', 'Redux', 'Bootstrap', 'MongoDB', 'Tensorflow', 'PyTorch'];
+var languages = ['JavaScript (ES6)', 'CSS 3', 'HTML 5', 'C++', 'C', 'Java', 'Python'];
+var relevantClasses = 
     [
         'Introduction to Computer Science', 'Data Structures and Algorithms', 'Introduction to Computer Organization', 
         'Software Construction Laboratory', 'Linear Algebra', 'Differential Equations', 'Discrete Mathematics'                 
     ];
-const classesInProgress = 
+var classesInProgress = 
     [
         'Introduction to Algorithms and Complexity', 'Logic Design of Digital Systems', 'Probability Theory'
     ];
+var clubs = ['ACM', 'UAS'];
 
-const clubs = ['ACM', 'UAS'];
-const descriptions = ['hello'];
-
+skills = formatAsList(skills);
+languages = formatAsList(languages);
+frameworks = formatAsList(frameworks);
+relevantClasses = formatAsList(relevantClasses);
+classesInProgress = formatAsList(classesInProgress);
+clubs = formatAsList(clubs);
 
 export default class Portfolio extends React.Component {
     constructor(props) {
         super(props);
-        const collapsed = [false, false, false, false, false, false];
-        this.state = {
-            collapsed: collapsed
-        };
-    }
-
-    toggle(id) {
-        const newCollapsed = this.state.collapsed;
-        newCollapsed[id] = !newCollapsed[id];
-        this.setState({
-            collapsed: newCollapsed
-        });
     }
 
     render() {
         return (
             <div>
                 <div className='skills'>
-                    <Button title='What are my skills?' textColor='white' border={false} onClick={() => this.toggle(0)}/>
-                    {this.state.collapsed[0] ? <Collapsible data={skills} textColor='white'/> : null}
+                    <Collapsible title='What are my skills?' textColor='white' content={skills}/>
                 </div>
                 <div className='skills'>
-                    <Button title='What frameworks/libraries do I know' textColor='white' border={false} onClick={() => this.toggle(1)}/>
-                    {this.state.collapsed[1] ? <Collapsible data={frameworks} textColor='white'/> : null}
+                    <Collapsible title='What languages do I know?' textColor='white' content={languages}/>
                 </div>
                 <div className='skills'>
-                    <Button title='What languages do I know?' textColor='white' border={false} onClick={() => this.toggle(2)}/>
-                    {this.state.collapsed[2] ? <Collapsible data={languages} textColor='white'/> : null}
+                    <Collapsible title='What frameworks/libraries do I know?' textColor='white' content={frameworks}/>
                 </div>
                 <div className='skills'>
-                    <Button title='What relevant classes have I taken?' textColor='white' border={false} onClick={() => this.toggle(3)}/>
-                    {this.state.collapsed[3] ? <Collapsible data={relevantClasses} textColor='white'/> : null}
+                    <Collapsible title='What relevant classes have I taken?' textColor='white' content={relevantClasses}/>
                 </div>
                 <div className='skills'>
-                    <Button title='What relevant classes am I currently taking?' textColor='white' border={false} onClick={() => this.toggle(4)}/>
-                    {this.state.collapsed[4] ? <Collapsible data={classesInProgress} textColor='white'/> : null}
+                    <Collapsible title='What relevant classes am I currently taking?' textColor='white' content={classesInProgress}/>
                 </div>
                 <div className='skills'>
-                    <Button title='What clubs am I in?' textColor='white' border={false} onClick={() => this.toggle(5)}/>
-                    {this.state.collapsed[5] ? <Collapsible data={clubs} descriptions={descriptions} textColor='white'>
-                    </Collapsible> : null}
+                    <Collapsible title='What clubs am I involved with?' textColor='white' content={clubs}/>
                 </div>
             </div>
         )

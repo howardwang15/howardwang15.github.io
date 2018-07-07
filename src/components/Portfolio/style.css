@@ -13,7 +13,7 @@
     column-gap: 3vw;
 }
 
-.skills double li{
+.skills li{
     width: 50%;
     color: white;
     font-size: 1.2vw;
@@ -23,6 +23,14 @@
 
 .skills li single {
     width: 100%;
+    color: white;
+    font-size: 1.2vw;
+    padding: 0.5vw;
+    float: left;
+}
+
+.bullet {
+    width: 50%;
     color: white;
     font-size: 1.2vw;
     padding: 0.5vw;
