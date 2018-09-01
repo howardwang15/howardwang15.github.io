@@ -20,13 +20,24 @@ var classesInProgress =
         'Introduction to Algorithms and Complexity', 'Logic Design of Digital Systems', 'Probability Theory'
     ];
 var clubs = ['ACM', 'UAS'];
+var roles = ['Dev team officer'];
+var descriptions = [
+    ['In ACM, I\'m a member of 3 committees: AI, Hack, and ICPC (international collegiate programming competition). I participate in'], 
+    ['Used YOLO to create a neural network for target detection on drones', 'Used React to create the ground station interface']
+];
 
 skills = formatAsList(skills);
 languages = formatAsList(languages);
 frameworks = formatAsList(frameworks);
 relevantClasses = formatAsList(relevantClasses);
 classesInProgress = formatAsList(classesInProgress);
-clubs = formatAsList(clubs);
+//clubs = formatAsList(clubs);
+//descriptions = formatAsList(descriptions);
+console.log(descriptions[0]);
+
+var final = clubs.map((club, index) => 
+    <li>{club}<ul>{descriptions[index].map((des) => <li>{des}</li>)}</ul></li>
+)
 
 export default class Portfolio extends React.Component {
     constructor(props) {
@@ -52,7 +63,8 @@ export default class Portfolio extends React.Component {
                     <Collapsible title='What relevant classes am I currently taking?' textColor='white' content={classesInProgress}/>
                 </div>
                 <div className='skills'>
-                    <Collapsible title='What clubs am I involved with?' textColor='white' content={clubs}/>
+                    <Collapsible title='What clubs am I involved with?' textColor='white' content={final} double={false}/>
+
                 </div>
             </div>
         )
