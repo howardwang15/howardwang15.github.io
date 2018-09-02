@@ -13,7 +13,7 @@ export default class Homepage extends React.Component {
                     Los Angeles. I love full stack web development as well as machine learning. My goal is to use different 
                     software technology to bring the world together in times when we need to stand united. In my spare time, 
                     I enjoy watching and playing basketball. wiejgieajrigo erjhoi arejoi areoijhoiaerj hoijreaoih oiserzjhoi ajreiohj iorehj oiarjeoih. 
-                    I also love to play chess and Magnus is cool. 
+                    I also love to play chess and Magnus is cool but Caruana might win in November. 
                 </div>
                 <div className='image'>
 
