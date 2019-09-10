@@ -1,21 +1,16 @@
 import React from 'react';
-import './style.css';
-
-
+import './styles.css';
 
 export default class Button extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     style = {
         color: this.props.textColor,
-        border: this.props.border? 'solid' : 'none'
+        border: this.props.border? 'solid' : 'none',
     }
 
     render() {
         return (
             <div>
-                <button className='btn' style={this.style} onClick={this.props.onClick}>{this.props.title}</button>
+                <button className='btn' style={{...this.style, ...this.props.style}} onClick={this.props.onClick}>{this.props.title}</button>
             </div>
         )
     }

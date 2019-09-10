@@ -1,0 +1,17 @@
+.four {
+    position: relative;
+    height: 100px;
+    width: 100px; 
+    background-image: url('https://ae01.alicdn.com/kf/HTB1vxlgKVXXXXbAXVXXq6xXFXXXx/12-7-11-6CM-Racing-Flame-Number-4-Cool-Car-Body-Stickers-Striking-Car-Styling-Decals.jpg_640x640.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.zero {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-image: url('https://res.cloudinary.com/teepublic/image/private/s--AVjVIpiY--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1456708184/production/designs/433763_1.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

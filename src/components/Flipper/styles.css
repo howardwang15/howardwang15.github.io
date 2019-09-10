@@ -1,0 +1,45 @@
+.card-front {
+    height: 54vh;
+    width: 48vh;
+    border: 4px white solid;
+}
+
+.card-front > p {
+    padding: 3%;
+}
+
+.card-back {
+    display: flex;
+    flex-direction: column;
+    height: 54vh;
+    width: 48vh;
+    border: 4px white solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back > p {
+    padding: 3%;
+    font-size: 1vw;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cochin;
+    font-size: 3vw;
+}
+
+p {
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+.ReactFlipCard > .ReactFlipCard__Flipper > .ReactFlipCard__Front {
+    position: relative;
+}
+
+#flip-container {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}

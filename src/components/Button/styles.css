@@ -1,0 +1,10 @@
+.btn {
+    background: inherit;
+    font-size: 1vw;
+    outline: none;
+    margin: 2%;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
