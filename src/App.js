@@ -33,7 +33,7 @@ class App extends Component {
             <div className='app'>                      
                 <div>
                     <ActionBar />
-                    {this.renderPage()} 
+                    {this.renderPage()}
                 </div> 
             </div>
         );

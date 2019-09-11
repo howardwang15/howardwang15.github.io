@@ -6,9 +6,9 @@ class Portfolio extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            languages: ['JavaScript', 'HTML', 'CSS', 'C++', 'C', 'Python', 'Java', 'SQL'],
-            frameworks: ['React', 'Redux', 'Bootstrap', 'Tensorflow', 'PyTorch', 'Node.js', 'MongoDB', 'Vue', 'Pug'],
-            tools: ['Git', 'Bash', 'Postman'],
+            languages: ['Python', 'C++/C', 'JavaScript', 'HTML', 'CSS', 'Java', 'SQL'],
+            frameworks: ['React', 'Redux', 'Bootstrap', 'TensorFlow', 'Keras', 'Node.js/Express', 'MongoDB', 'Elasticsearch', 'PostgreSQL'],
+            tools: ['Git', 'Bash', 'Postman', 'GCP', 'AWS', 'Kibana'],
             flipped: false
         }
     }
@@ -18,26 +18,27 @@ class Portfolio extends React.Component {
             <div>
                 <div className='container' id='portfolio'>
                     <div id='skills-container'>
-                    <table className='table responsive'>
-                        <thead>
-                            <tr>
-                                <th>LANGUAGES</th>
-                                <th>FRAMEWORKS/LIBRARIES</th>
-                                <th>TOOLS</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                this.state.languages.map((item, index) => 
-                                    <tr key={index}>
-                                        <td>{this.state.languages[index]}</td>
-                                        <td>{index < this.state.frameworks.length ? this.state.frameworks[index] : null}</td>
-                                        <td>{index < this.state.tools.length ? this.state.tools[index] : null}</td>
-                                    </tr>
-                                )}
-                        </tbody>
-                    </table>
+                        <table className='table responsive'>
+                            <thead>
+                                <tr>
+                                    <th>LANGUAGES</th>
+                                    <th>FRAMEWORKS/LIBRARIES</th>
+                                    <th>TOOLS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    this.state.languages.map((item, index) => 
+                                        <tr key={index} >
+                                            <td>{this.state.languages[index]}</td>
+                                            <td>{index < this.state.frameworks.length ? this.state.frameworks[index] : null}</td>
+                                            <td>{index < this.state.tools.length ? this.state.tools[index] : null}</td>
+                                        </tr>
+                                    )}
+                            </tbody>
+                        </table>
                     </div>
+
                     <div id='projects-container' className='container-fluid'>
                         <span className='projects-header'>PROJECTS</span>
                         <div className='container-fluid'>
@@ -65,6 +66,18 @@ class Portfolio extends React.Component {
                                 <div className='col-sm-4 col-sm-offset-1'>
                                     <Flipper title='Image Rotation' description={projectDescriptions.rotateImage.description} 
                                         info={projectDescriptions.rotateImage.info} src='https://github.com/howardwang15/rotate-image' />
+                                </div>
+                            </div>
+                            <div className='row-container'>
+                                <div className='col-sm-4 col-sm-offset-1'>
+                                    <Flipper title='FUT Ratings' description={projectDescriptions.futRatings.description}
+                                        info={projectDescriptions.futRatings.info} src='https://github.com/howardwang15/fut-ratings-predictions' />
+                                </div>
+                            </div>
+                            <div className='row-container'>
+                                <div className='col-sm-4 col-sm-offset-1'>
+                                    <Flipper title='KMeans Compression from Scratch' description={projectDescriptions.kmeans.description}
+                                        info={projectDescriptions.kmeans.info} src='https://github.com/howardwang15/k-means-compression' />
                                 </div>
                             </div>
                         </div>
@@ -104,6 +117,17 @@ const projectDescriptions = {
                         This script is useful for creating training or testing data for image recognition algorithms`,
         info: `I used OpenCV to calculate the transformation matrix for rotating the image, and then applied that matrix to the image and also to the
                 landmarks to get the new coordinates`
+    },
+    futRatings: {
+        description: `FUT Ratings was the first project I created that combined my 2 passions in the field of CS- full-stack web dev and machine learning.
+                        The project started with me wanting to learn Angular and serving TensorFlow models over the week-long spring break in 2019.`,
+        info: `Used Keras to build a regression neural network to predict the rating of a soccer player in the FIFA 18 games based on their speed, shooting, etc
+                game stats. Served the saved model using TensorFlow Serving and created a REST API to send process inference requests using Flask/Python. Created
+                a web application using Angular to create custom FIFA cards.`
+    },
+    kmeans: {
+        description: `Created a KMeans unsupervised/clustering model from scratch that enabled users to compress images`,
+        info: `Used Python and NumPy to construct KMeans models and utilized Flask to serve requests. Employed React to build a dashboard for uploading images`
     }
 };
 

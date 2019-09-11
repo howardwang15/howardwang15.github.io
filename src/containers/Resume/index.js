@@ -1,5 +1,5 @@
 import React from 'react';
-import resume from '../../resources/Resume-web-dev-classes.pdf';
+import resume from '../../resources/Resume-2019.pdf';
 
 export default class Resume extends React.Component {
     render() {
