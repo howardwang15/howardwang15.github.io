@@ -80,6 +80,12 @@ class Portfolio extends React.Component {
                                         info={projectDescriptions.kmeans.info} src='https://github.com/howardwang15/k-means-compression' />
                                 </div>
                             </div>
+                            <div className='row-container'>
+                                <div className='col-sm-4 col-sm-offset-1'>
+                                    <Flipper title='Java Compiler' description={projectDescriptions.compiler.description}
+                                        info={projectDescriptions.compiler.info} src='https://github.com/howardwang15/cs132' />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,6 +134,11 @@ const projectDescriptions = {
     kmeans: {
         description: `Created a KMeans unsupervised/clustering model from scratch that enabled users to compress images`,
         info: `Used Python and NumPy to construct KMeans models and utilized Flask to serve requests. Employed React to build a dashboard for uploading images`
+    },
+    compiler: {
+        description: `From my 10 week compiler construction course at UCLA, I created a full-fledged MiniJava compiler to compile MiniJava code to its MIPS
+                        equivalent. The compiler performs type checking and stack allocation for variables.`,
+        info: `Used Java to build the compiler and bash scripts to run the compilation pipeline and MIPS code. Followed the Visitor design pattern.`
     }
 };
 
